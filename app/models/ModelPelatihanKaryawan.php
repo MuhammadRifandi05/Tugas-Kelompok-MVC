@@ -20,7 +20,7 @@ class PelatihanKaryawan extends Database {
     }
 
     public function edit_data() {
-        $query = $this->conn->query("UPDATE pelatihan_karyawan SET id_karyawan = '$_POST[id_pelatihan]', tanggal = '$_POST[tanggal]', keterangan = '$_POST[keterangan]' WHERE id_pelatihanKaryawan = '$_POST[id_pelatihanKaryawan]'");
+        $query = $this->conn->query("UPDATE pelatihan_karyawan SET id_karyawan = '$_POST[id_karyawan]', tanggal = '$_POST[tanggal]', keterangan = '$_POST[keterangan]' WHERE id_pelatihanKaryawan = '$_POST[id_pelatihanKaryawan]'");
         return $query;
     }
 
