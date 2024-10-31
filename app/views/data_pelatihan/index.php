@@ -8,32 +8,26 @@
     <title>Tampil Data Pelatihan</title>
 </head>
 <body>
-    <a href="/pelatihan_karyawan/create" class="btn btn-primary m-5">Tambah Pelatihan</a>
+    <a href="/data_pelatihan/create" class="btn btn-primary m-5">Tambah Pelatihan</a>
 
     <table style="font-family: verdana" class="table table-bordered border-primary max-w-xl mx-auto">
         <tr class="table-active table-success">
             <th class="text-center">No.</th>
-            <th class="text-center">ID Pelatihan Karyawan</th>
-            <th class="text-center">ID Karyawan</th>
-            <th class="text-center">ID Pelatihan</th>
-            <th class="text-center">Tanggal</th>
-            <th class="text-center">Keterangan</th>
+            <th class="text-center">nama</th>
+            <th class="text-center">keterangan</th>
             <th class="text-center">Aksi</th>
         </tr>
         <?php
         $no = 1;
-        foreach($data_pelatihan as $row){
+        foreach($DataPelatihan as $row){
         ?>
         <tr>
             <td class="text-center"><?php echo $no++; ?></td>
-            <td class="text-center"><?php echo $row['id_pelatihanKaryawan']; ?></td>
-            <td class="text-center"><?php echo $row['id_karyawan']; ?></td>
-            <td class="text-center"><?php echo $row['id_pelatihan']; ?></td>
-            <td class="text-center"><?php echo $row['tanggal']; ?></td>
+            <td class="text-center"><?php echo $row['nama']; ?></td>
             <td class="text-center"><?php echo $row['keterangan']; ?></td>
             <td class="text-center">
-                <a href="/pelatihan_karyawan/edit/<?php echo $row['id_pelatihanKaryawan']; ?>" class="btn btn-warning">Edit</a>
-                <a href="/pelatihan_karyawan/delete/<?php echo $row['id_pelatihanKaryawan']; ?>" class="btn btn-danger">Delete</a>
+                <a href="/data_pelatihan/edit/<?php echo $row['id_pelatihan']; ?>" class="btn btn-warning">Edit</a>
+                <a href="/data_pelatihan/delete/<?php echo $row['id_pelatihan']; ?>" class="btn btn-danger">Delete</a>
             </td>
         </tr>
         <?php 

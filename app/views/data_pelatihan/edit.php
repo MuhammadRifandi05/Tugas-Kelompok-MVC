@@ -10,13 +10,13 @@
 
     <form action="/data_pelatihan/update" method="post">
         <!-- Hidden field to store ID Pelatihan -->
-        <input type="hidden" name="id_pelatihan" value="<?= $data_pelatihan['id_pelatihan']; ?>">
+        <input type="hidden" name="id_pelatihan" value="<?= $DataPelatihan['id_pelatihan']; ?>">
 
         <label for="nama">Nama</label>
-        <input type="text" name="nama" value="<?= $data_pelatihan['nama']; ?>" required>
+        <input type="text" name="nama" value="<?= $DataPelatihan['nama']; ?>" required>
 
         <label for="keterangan">Keterangan</label> 
-        <input type="text" name="keterangan" value="<?= $data_pelatihan['keterangan']; ?>" required>
+        <input type="text" name="keterangan" value="<?= $DataPelatihan['keterangan']; ?>" required>
 
         <button type="submit">Simpan</button>
     </form>

@@ -14,7 +14,7 @@ class DataPelatihanModels Extends Database {
     }
     
     public function tambahDataPelatihan(){
-        $query = $this->conn->query("INSERT INTO data_pelatihan (id_pelatihan, nama, keterangan) VALUES ('$_POST[id_pelatihan]', '$_POST[nama]', '$_POST[keterangan]')");
+        $query = $this->conn->query("INSERT INTO data_pelatihan (nama, keterangan, Aksi) VALUES ('$_POST[nama]', '$_POST[keterangan]', '$_POST[Aksi]')");
         return $query;
     }
 
@@ -28,7 +28,7 @@ class DataPelatihanModels Extends Database {
         return $query;
     }
 
-    public function deleteDataPelatihan($id_pelatihan) {
+    public function delete($id_pelatihan){
         $query = $this->conn->query("DELETE FROM data_pelatihan WHERE id_pelatihan = '$id_pelatihan'");
         return $query;
     }

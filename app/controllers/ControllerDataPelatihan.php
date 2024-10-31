@@ -2,7 +2,7 @@
 // app/controllers/UserController.php
 require_once '../app/models/ModelDataPelatihan.php';
 
-class ControllerDataPelatihan {
+class DataPelatihan {
     private $DataModel;
 
     public function __construct() {
@@ -36,7 +36,7 @@ class ControllerDataPelatihan {
     }
 
     public function delete($id_pelatihan){
-        $this->DataModel->deleteDataPelatihan($id_pelatihan);
+        $this->DataModel->delete($id_pelatihan);
         header('location: /data_pelatihan/index');
     }
 }
